@@ -1,0 +1,230 @@
+/* Reset CSS cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header & Thanh điều hướng */
+.main-header {
+    background-color: #2c3e50;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1abc9c;
+}
+
+/* Thùng chứa chính */
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Thẻ Thông tin cá nhân (Profile Card) */
+.profile-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #1abc9c;
+    margin-bottom: 1rem;
+}
+
+.user-name {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.user-title {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Khối Quote từ API */
+.quote-box {
+    background-color: #eef9f6;
+    border-left: 4px solid #1abc9c;
+    padding: 1rem;
+    border-radius: 6px;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+.btn-small {
+    background: #1abc9c;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+}
+
+/* Khối nội dung chung */
+.section-box {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.section-box h2 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 0.5rem;
+}
+
+/* Gợi ý tương tác */
+.hint-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* Danh sách kỹ năng có hiệu ứng */
+.skills-list {
+    list-style: none;
+}
+
+.skill-item {
+    background: #f8f9fa;
+    margin-bottom: 0.8rem;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    background: #edf2f7;
+}
+
+.skill-header {
+    padding: 0.8rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Biểu tượng mũi tên xoay khi mở */
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Phần nội dung chi tiết ẩn đi ban đầu */
+.skill-detail {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    color: #555;
+    font-size: 0.95rem;
+    background: #fff;
+    transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+}
+
+/* Class kích hoạt khi nhấp vào skill */
+.skill-item.active .skill-detail {
+    max-height: 200px;
+    opacity: 1;
+    padding: 0.8rem 1rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.skill-item.active .arrow-icon {
+    transform: rotate(180deg);
+    color: #1abc9c;
+}
+
+.skill-item.active {
+    border-left-color: #1abc9c;
+}
+
+/* Dự án Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.project-card {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+/* Form liên hệ */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.btn-primary {
+    background: #2c3e50;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #1abc9c;
+}
+
+.response-msg {
+    margin-top: 1rem;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+/* Footer */
+.main-footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #2c3e50;
+    color: white;
+}

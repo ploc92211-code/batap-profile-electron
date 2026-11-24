@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Nhúng font & icon từ FontAwesome cho giao diện bắt mắt -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navigation Bar -->
+    <header class="main-header">
+        <div class="logo">MyProfile</div>
+        <nav class="nav-links">
+            <a href="#about">Giới thiệu</a>
+            <a href="#skills">Kỹ năng</a>
+            <a href="#projects">Dự án</a>
+            <a href="#contact">Liên hệ</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container">
+        
+        <!-- Section: Giới thiệu bản thân -->
+        <section id="about" class="profile-card">
+            <img src="hi.jpg " alt="Ảnh đại diện" class="avatar" id="user-avatar">
+            <h1 class="user-name">Nguyễn Phát Lộc </h1>
+            <p class="user-title">Học sinh lớp 10 chuyên Tin</p>
+            
+            <!-- API Integration Display: Danh ngôn / Quote ngẫu nhiên -->
+            <blockquote class="quote-box" id="quote-box">
+                <p id="quote-text">Đang tải câu danh ngôn truyền cảm hứng...</p>
+                <small id="quote-author"></small>
+                <button id="btn-new-quote" class="btn-small"><i class="fa-solid fa-rotate"></i> Đổi câu khác</button>
+            </blockquote>
+        </section>
+
+        <!-- Section: Kỹ năng (Tương tác click để hiện nội dung chi tiết) -->
+        <section id="skills" class="section-box">
+            <h2><i class="fa-solid fa-code"></i> Kỹ năng cá nhân</h2>
+            <p class="hint-text"><i>(Nhấp vào từng kỹ năng để xem chi tiết mô tả)</i></p>
+            
+            <ul class="skills-list">
+                <li class="skill-item">
+                    <div class="skill-header">
+                        <span>Code web cơ bản </span>
+                        <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                    </div>
+                    <div class="skill-detail">
+                      Có khả năng code 1 web cơ bản đầy đủ chức năng, như web giới thiệu bản thân,web bấm giờ,...
+                    </div>
+                </li>                       
+                <li class="skill-item" >
+                    <div class="skill-header">
+                        <span>Tư duy tự học cao </span>
+                        <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                    </div>
+                    <div class="skill-detail">
+                      Tính kỉ luật cao, khả năng tiếp thu học thuật tăng,tính tự giác cao.
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Section: Dự án tiêu biểu -->
+        <section id="projects" class="section-box">
+            <h2><i class="fa-solid fa-folder-open"></i> Dự án nổi bật</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3>Trang Web Profile Cá Nhân</h3>
+                    <p>Ứng dụng HTML Semantic, CSS Flexbox/Grid và JavaScript kết nối API danh ngôn</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section: Liên hệ -->
+        <section id="contact" class="section-box">
+            <h2><i class="fa-solid fa-envelope"></i> Gửi tin nhắn</h2>
+            <form id="contact-form" class="contact-form">
+                <input type="text" id="contact-name" placeholder="Họ và tên của bạn" required>
+                <textarea id="contact-message" placeholder="Nội dung tin nhắn..." rows="4" required></textarea>
+                <button type="submit" class="btn-primary">Gửi tin nhắn</button>
+            </form>
+            <p id="form-response-msg" class="response-msg"></p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <main class="container">
+        <!-- Footer nội dung giữ nguyên -->
+    </main>
+    <footer class="main-footer">
+        <p>&copy; 2026 Hồ Sơ Cá Nhân. Bản quyền thuộc về tác giả.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
